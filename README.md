@@ -35,7 +35,7 @@ Esses dígitos são calculados usando:
 ```java
 import java.util.Scanner;
 
-public class GustavoRodrigues_validar_cpf
+public class validar_cpf
 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -104,13 +104,13 @@ public class GustavoRodrigues_validar_cpf
 1. Compile o código:
 
 ```
-javac GustavoRodrigues_validar_cpf.java
+javac validar_cpf.java
 ```
 
 2. Execute:
 
 ```
-java GustavoRodrigues_validar_cpf
+java validar_cpf
 ```
 
 3. Digite um CPF com 11 números quando solicitado.
