@@ -147,9 +147,3 @@ java validar_cpf
 ## 👨‍💻 Autor
 
 Gustavo Rodrigues
-
----
-
-## 📌 Objetivo
-
-Projeto desenvolvido com foco em aprendizado de lógica de programação e fundamentos da linguagem Java.
