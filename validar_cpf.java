@@ -11,19 +11,17 @@ public class validar_cpf
 	       System.out.println("CPF invalido!");
 	        return;
 	    } 
-	    //verifica o primeiro digito
+	    
+	    // verifica o primeiro digito
 	    int soma = 0;
 	    
 	    for (int i = 0; i < 9; i++) {
-	        //pega o número na possição i
 	        int num = CPF.charAt(i) - '0';
 	        soma += num * (10 - i);
 	    }
 	        
-	        //pega o resto da divisão por 11
-	        int resto = soma % 11;
-	        
-	        int digito1;
+	    int resto = soma % 11;
+	    int digito1;
 	        
 	    if (resto < 2) {
 	        digito1 = 0;
@@ -31,20 +29,21 @@ public class validar_cpf
 	        digito1 = 11 - resto;
 	    }
 	        
-	        
-	    
-	    
-	    //verifica o segundo digito (quase a mesma coisa do primeiro)
-	    
+	    // verifica o segundo digito
 	    soma = 0;
 	    
-	    for (int i = 0; i < 10; i++) {
-	        //pega o número na possição i
+	    // usa os 9 primeiros numeros
+	    for (int i = 0; i < 9; i++) {
 	        int num = CPF.charAt(i) - '0';
 	        soma += num * (11 - i);
 	    }
+	    
+	    // usa o digito1 calculado
+	    soma += digito1 * 2;
 	   
-	        int digito2;
+	    resto = soma % 11;
+	    
+	    int digito2;
 	        
 	    if (resto < 2) {
 	        digito2 = 0;
@@ -52,7 +51,7 @@ public class validar_cpf
 	        digito2 = 11 - resto;
 	    }
 	   
-	    //pega o decimo e o decimo primeiro número
+	    // pega o decimo e o decimo primeiro numero
 	    int ultimo1 = CPF.charAt(9) - '0';
 	    int ultimo2 = CPF.charAt(10) - '0';
 	    
@@ -63,6 +62,5 @@ public class validar_cpf
 	    }
 	    
 	    sc.close();
-	    
 	}
 }
